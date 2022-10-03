@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2 testing</title>
+
+
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="imgdiv" class="center">
+        <img id="eggo" src="./images/1.jpeg" width="300">
+    </div>
+
+    <div class="radio_buttons center">
+        <form id="select_wave">
+            <input type="radio" id="sine" name="waves" value="sine" checked="checked">
+            <label for="sine">sine</label>
+            <input type="radio" id="sawtooth" name="waves" value="sawtooth">
+            <label for="sawtooth">sawtooth</label>
+
+        </form>
+    </div>
+
+    <div class="modes center">
+        <form id="select_modes">
+            <input type="radio" id="additive" name="mode" value="additive" checked="checked">
+            <label for="additive"> Additive Synthesis </label>
+            <input type="radio" id="lfo" name="mode" value="lfo">
+            <label for="lfo"> Additive LFO Synthesis </label>
+            <input type="radio" id="am" name="mode" value="am">
+            <label for="am">Amplitude Modulation </label>
+            <input type="radio" id="fm" name="mode" value="fm">
+            <label for="fm"> Frequency Modulation</label>
+        </form>
+    </div>
+
+    <div>
+        <p>Control modulator frequency</p>
+        <input type="range" min=1 max=1000 oninput="updateFreq(this.value)"></input>
+        <p>Control index of modulation</p>
+        <input type="range" min=1 max=1000 oninput="updateIndex(this.value)"></input>
+    </div>
+
+</body>
+<script src="main.js"> </script>
+
+</html>
